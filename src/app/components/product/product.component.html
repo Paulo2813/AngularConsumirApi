@@ -1,0 +1,29 @@
+<div style="padding: 50px;">
+    <h1 class="text-center">Tecnologia product!</h1>
+    <table class="table table-hover">
+        <thead class="table-danger">
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">nombre</th>
+                <th scope="col">descripcion</th>
+                <th scope="col">precio</th>
+                <th scope="col">stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(item of productList; track $index){
+                <tr>
+                    <th class="row">{{item.id}}</th>
+                    <td>{{item.nombre}}</td>
+                    <td>{{item.descripcion}}</td>
+                    <td>
+                        <span class="badge bg-success">
+                            {{item.precio}}
+                        </span>
+                    </td>
+                    <td>{{item.stock}}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
